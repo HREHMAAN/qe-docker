@@ -16,15 +16,6 @@ Install Docker Desktop for Mac from the official Docker website:
 https://docs.docker.com/desktop/setup/install/mac-install/
 ```
 
-After installation, open Docker Desktop and wait until Docker is running.
-
-Test Docker:
-
-```bash
-docker --version
-docker run hello-world
-```
-
 ### Windows
 
 Install Docker Desktop for Windows from the official Docker website:
@@ -33,14 +24,6 @@ Install Docker Desktop for Windows from the official Docker website:
 https://docs.docker.com/desktop/setup/install/windows-install/
 ```
 
-After installation, open Docker Desktop and wait until Docker is running.
-
-Test Docker:
-
-```bash
-docker --version
-docker run hello-world
-```
 
 ### Ubuntu/Linux
 
@@ -49,31 +32,11 @@ For Ubuntu, install Docker Engine using Docker's official apt repository:
 ```text
 https://docs.docker.com/engine/install/ubuntu/
 ```
-
-After installation, test Docker:
-
-```bash
-docker --version
-sudo docker run hello-world
-```
-
-If you do not want to type `sudo` every time, add your user to the Docker group:
-
-```bash
-sudo usermod -aG docker $USER
-```
-
-Then log out and log back in.
-
-Test again:
-
-```bash
-docker run hello-world
-```
+After installation, open Docker Desktop and wait until Docker is running.
 
 ## Build locally
 
-Clone this repository:
+After installing docker Clone this repository:
 
 ```bash
 git clone https://github.com/HREHMAAN/qe-docker.git
