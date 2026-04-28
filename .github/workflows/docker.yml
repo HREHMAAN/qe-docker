@@ -26,6 +26,6 @@ jobs:
         with:
           context: .
           push: false
-          tags: test_qef:latest
+          tags: quantum-espresso:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
