@@ -41,6 +41,45 @@ To exit if it waits for input, press:
 ```bash
 Ctrl+C
 ```
+## Run the demo
+
+The repository includes a demo input file:
+
+```text
+demo/espresso.pwi
+```
+
+To run the demo, first start the Docker container:
+
+```bash
+docker run -it -v $(pwd):/root/shared --rm -w /root/shared quantum-espresso
+```
+
+Then inside the container:
+
+```bash
+cd demo
+```
+
+Run the demo with:
+
+```bash
+pw.x < espresso.pwi | tee espresso.out
+```
+
+This runs Quantum ESPRESSO and saves the output to `espresso.out` while also showing it in the terminal.
+
+Alternatively, if using MPI:
+
+```bash
+mpirun pw.x < espresso.pwi > espresso.out
+```
+
+After the run finishes, check:
+
+```bash
+grep "JOB DONE" espresso.out
+```
 
 ## Notes
 
