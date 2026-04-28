@@ -1,9 +1,7 @@
 FROM ubuntu:26.04 AS base
 
-# Prevent interactive prompts during apt installations
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install dependencies and clean up apt cache to save space
 # hadolint ignore=DL3008
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -15,21 +13,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pkg-config \
     gfortran \
     liblapack-dev \
+    ca-certificates \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
 
-# Clone the Quantum ESPRESSO repository
+# Note: Using the 'develop' branch as requested by your supervisor. 
+# For long-term reproducibility later, you might want to switch this to a specific release tag!
 RUN git clone --branch=develop --single-branch https://gitlab.com/QEF/q-e.git
 
-WORKDIR /src/q-e
+WORKDIR /src/q-e/build
 
-# Configure and build
-RUN ./configure && \
+RUN ../configure && \
     make -j"$(nproc)" all
 
-# Add the Q-E binaries to the system PATH
 ENV PATH="/src/q-e/bin:${PATH}"
 
-# Default command when the container starts
+WORKDIR /root/shared
+
 CMD ["/bin/bash"]
