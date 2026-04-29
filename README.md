@@ -32,6 +32,8 @@ After installing docker Clone this repository:
 
 ```bash
 git clone https://github.com/HREHMAAN/qe-docker.git
+```
+```
 cd qe-docker
 ```
 
