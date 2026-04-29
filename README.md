@@ -24,14 +24,6 @@ Install Docker Desktop for Windows from the official Docker website:
 https://docs.docker.com/desktop/setup/install/windows-install/
 ```
 
-
-### Ubuntu/Linux
-
-For Ubuntu, install Docker Engine using Docker's official apt repository:
-
-```text
-https://docs.docker.com/engine/install/ubuntu/
-```
 After installation, open Docker Desktop and wait until Docker is running.
 
 ## Build locally
