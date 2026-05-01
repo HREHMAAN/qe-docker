@@ -47,22 +47,7 @@ OR - in widows powershell
 docker run -it -v ${PWD}:/root/shared --rm -w /root/shared quantum-espresso
 ```
 
-## Test Quantum ESPRESSO
 
-Inside the container, run:
-
-```bash
-which pw.x
-pw.x
-```
-
-You should see Quantum ESPRESSO start and wait for input.
-
-To exit if it waits for input, press:
-
-```bash
-Ctrl+C
-```
 ## Run the demo
 
 The repository includes a demo input file:
