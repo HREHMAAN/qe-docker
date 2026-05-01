@@ -10,7 +10,7 @@ Docker is required to build and run this image.
 
 ### macOS
 
-Install Docker Desktop for Mac from the official Docker website:
+Install Docker Desktop for Mac from the official Docker website: https://docs.docker.com/desktop/setup/install/mac-install/
 
 ```text
 https://docs.docker.com/desktop/setup/install/mac-install/
