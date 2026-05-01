@@ -12,17 +12,10 @@ Docker is required to build and run this image.
 
 Install Docker Desktop for Mac from the official Docker website: https://docs.docker.com/desktop/setup/install/mac-install/
 
-```text
-https://docs.docker.com/desktop/setup/install/mac-install/
-```
-
 ### Windows
 
-Install Docker Desktop for Windows from the official Docker website:
+Install Docker Desktop for Windows from the official Docker website: https://docs.docker.com/desktop/setup/install/windows-install/
 
-```text
-https://docs.docker.com/desktop/setup/install/windows-install/
-```
 
 After installation, open Docker Desktop and wait until Docker is running.
 
